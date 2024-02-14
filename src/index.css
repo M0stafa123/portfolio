@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply bg-[#0e0915] text-white;
+}
+html {
+  @apply scroll-smooth;
+}
+/* GLOPAL */
+.svg {
+  @apply fixed top-1/2 left-1/2 -translate-x-1/2 scale-[5] -translate-y-1/2 w-[100px] z-20;
+  animation: place 1s 4s forwards;
+}
+.svg svg {
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 10000;
+  animation: svg 20s 500ms forwards;
+}
+
+@keyframes svg {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes place {
+  to {
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+}
+.bg {
+  @apply bg-[#0e0915] z-10;
+  animation: bg 6s forwards;
+}
+@keyframes bg {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+.mainHeader {
+  @apply mb-4 text-3xl md:text-6xl p-2;
+}
+.mainHeader span {
+  @apply mx-[1px] cursor-default;
+}
+.mainHeader span:hover {
+  @apply inline-block text-mainText drop-shadow-[1px_1px_6px_#5EEAD4];
+  animation: gelatine 1s 1 both;
+}
+@keyframes gelatine {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1.5, 0.7);
+  }
+  50% {
+    transform: scale(1.1, 1);
+  }
+  75% {
+    transform: scale(1.4, 0.9);
+  }
+}
+/*  */
+/* aside */
+
+.nav li a {
+  @apply flex items-center gap-[2px] cursor-pointer w-fit text-slate-600;
+}
+.nav li span {
+  @apply hidden md:block w-5 h-[1px]   transition-all bg-slate-600;
+}
+.active span {
+  @apply !w-10 !bg-white;
+}
+.active a {
+  @apply !text-white;
+}
+/*  */
+/* add Projects */
+.projects div {
+  @apply w-[300px] md:w-[400px];
+}
+.projects div label {
+  @apply flex my-4 justify-between text-xl text-mainText;
+}
+.projects div input {
+  @apply outline-none rounded-md p-2 border text-black w-full;
+}
+/*  */
+/* skills */
+.skills_brands {
+  @apply text-center;
+}
+.skills_brands i {
+  @apply text-4xl;
+}
+.skills_brands div {
+  @apply w-[90px] flex-col flex justify-between h-[80px];
+}
+.skills_brands svg {
+  @apply w-[50px] mx-auto h-fit;
+}
+/*  */
+/* card */
+.techs span {
+  @apply min-w-[60px] md:min-w-[70px] py-3 text-center cursor-default rounded-full bg-mainBG text-mainText capitalize;
+}
+/*  */
