@@ -9,15 +9,25 @@ html {
 }
 /* GLOPAL */
 .svg {
-  @apply fixed top-1/2 left-1/2 -translate-x-1/2 scale-[5] -translate-y-1/2 w-[100px] z-20;
-  animation: place 1s 4s forwards;
+  @apply md:w-[140px] lg:w-[160px] min-w-[100px] fixed top-1/2 left-1/2 -translate-x-1/2 scale-[5] -translate-y-1/2  z-20;
+  animation: place 1s 2.3s forwards;
+}
+@media (min-width: 768px) {
+  .svg {
+    @apply -ml-10;
+  }
 }
 .svg svg {
-  stroke-dasharray: 10000;
-  stroke-dashoffset: 10000;
-  animation: svg 20s 500ms forwards;
+  stroke-dasharray: 1140;
+  stroke-dashoffset: 1140;
+  animation: svg 2000ms forwards linear;
 }
-
+@media (min-width: 768px) {
+  .svg svg {
+    stroke-dasharray: 1240;
+    stroke-dashoffset: 1240;
+  }
+}
 @keyframes svg {
   to {
     stroke-dashoffset: 0;
@@ -25,25 +35,18 @@ html {
 }
 @keyframes place {
   to {
-    left: 0;
-    top: 0;
-    transform: none;
+    @apply absolute -translate-x-1/2  -translate-y-1/2 scale-100 left-[60px] md:top-[30px] lg:top-[35px] 
+     mr-[-20px] mt-[4px];
   }
 }
 .bg {
-  @apply bg-[#0e0915] z-10;
-  animation: bg 6s forwards;
+  @apply bg-[#0e0915] z-10  fixed w-full h-full top-0 left-0;
+  animation: bg 1s 2.3s forwards;
 }
 @keyframes bg {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    display: none;
+  to {
     opacity: 0;
+    pointer-events: none;
   }
 }
 .mainHeader {

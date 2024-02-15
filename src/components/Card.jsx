@@ -7,9 +7,11 @@ const Card = ({ name, Techs, preview, live, github }) => {
       <section>
         <h4 className="my-3">{name}</h4>
         <div className="flex items-center justify-between my-4">
-          <a target="_blank" rel="noreferrer" href={live}>
-            Live site
-          </a>
+          {live && (
+            <a target="_blank" rel="noreferrer" href={live}>
+              Live site
+            </a>
+          )}
           <a target="_blank" href={github} rel="noreferrer">
             Github link
           </a>

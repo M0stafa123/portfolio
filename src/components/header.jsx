@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
-
-const Aside = ({ aboutInView, skillsinview, projectInView }) => {
-  const [active, setActive] = useState("");
+import SVG from "./logo";
+const Aside = () => {
+  const [fixed, setFixed] = useState(false);
+  setTimeout(() => {
+    setFixed(true);
+  }, 2300);
+  console.log(fixed);
+  const [active, setActive] = useState("about");
   const handleClick = (item) => {
     setActive(item);
   };
@@ -14,15 +19,24 @@ const Aside = ({ aboutInView, skillsinview, projectInView }) => {
       document.body.style.overflow = "hidden";
       setTimeout(() => {
         document.body.style.overflow = "";
-      }, 3800);
+      }, 2000);
     };
     scrollToTop();
   }, []);
   return (
     <aside className="w-full  md:h-screen p-4 md:w-[50%]">
-      <article className="text-center md:text-left md:fixed md:mt-60">
-        <div>
-          <h1 className="text-3xl lg:text-6xl md:text-5xl">Mostafa Mohamed</h1>
+      <article
+        className={
+          "aside text-center  md:text-left  md:mt-60 " + (fixed ? "md:fixed" : "")
+        }
+      >
+        <div className="relative flex items-center justify-center flex-col md:block">
+          <h1 className="text-3xl  max-w-[500px] my-4 lg:text-6xl md:text-5xl relative  flex items-center justify-center">
+            <SVG />
+            <span className="whitespace-nowrap ml-[85px] md:ml-[65px]">
+              ostafa Mohamed
+            </span>
+          </h1>
           <h2
             className=" mainHeader
           text-xl md:text-3xl my-4"
@@ -44,7 +58,7 @@ const Aside = ({ aboutInView, skillsinview, projectInView }) => {
           </h2>
           <ul className="nav hidden items-center justify-center gap-9 md:block  md:w-fit my-4  ">
             <li
-              className={active === "about" || aboutInView ? "active" : ""}
+              className={active === "about" ? "active" : ""}
               onClick={() => handleClick("about")}
             >
               <a href="#about">
@@ -52,7 +66,7 @@ const Aside = ({ aboutInView, skillsinview, projectInView }) => {
               </a>
             </li>
             <li
-              className={active === "skills" || skillsinview ? "active" : ""}
+              className={active === "skills" ? "active" : ""}
               onClick={() => handleClick("skills")}
             >
               <a href="#skills">
@@ -60,7 +74,7 @@ const Aside = ({ aboutInView, skillsinview, projectInView }) => {
               </a>
             </li>
             <li
-              className={active === "projects" || projectInView ? "active" : ""}
+              className={active === "projects" ? "active" : ""}
               onClick={() => handleClick("projects")}
             >
               <a href="#projects">

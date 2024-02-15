@@ -1,20 +1,20 @@
-import anime from "animejs";
-import { useEffect } from "react";
+// import anime from "animejs";
+// import { useEffect } from "react";
 
-const About = ({ aboutRef }) => {
-  useEffect(() => {
-    anime({
-      targets: ".software",
-      translateY: [{ value: 25 }],
-      loop: true,
-      easing: "linear",
-      direction: "alternate",
-      duration: "2500",
-    });
-  }, []);
+const About = () => {
+  // useEffect(() => {
+  //   anime({
+  //     targets: ".software",
+  //     translateY: [{ value: 25 }],
+  //     loop: true,
+  //     easing: "linear",
+  //     direction: "alternate",
+  //     duration: 3000,
+  //   });
+  // }, []);
 
   return (
-    <section ref={aboutRef} id="about" className="flex flex-col justify-center mb-10">
+    <section id="about" className="flex flex-col justify-center mb-10">
       <img
         src="./145aeb42-a3b4-492a-bd0a-ea2b5bbf4312.png"
         alt="software"
