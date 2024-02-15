@@ -1,6 +1,5 @@
 // import anime from "animejs";
 // import { useEffect } from "react";
-import { memo } from "react";
 const About = () => {
   // useEffect(() => {
   //   anime({
@@ -12,15 +11,14 @@ const About = () => {
   //     duration: 3000,
   //   });
   // }, []);
-  console.log("about component is rendred");
   return (
     <section id="about" className="flex flex-col justify-center mb-10">
-      {/* <img
+      <img
         src="./145aeb42-a3b4-492a-bd0a-ea2b5bbf4312.webp"
         fetchpriority="high"
         alt="software"
-        className="software mb-auto"
-      /> */}
+        className="software mb-8"
+      />
       <p className=" mb-10 capitalize text-4xl">
         build fast, responsive and dynamic websites
       </p>
@@ -39,7 +37,7 @@ const About = () => {
         and enhance my skills with projects from
         <a
           href="https://www.frontendmentor.io/profile/M0stafa123/solutions"
-          className=" transition-all hover:text-mainText"
+          className="transition-[width] hover:text-mainText"
           target="_blank"
           rel="noreferrer"
         >
@@ -51,4 +49,4 @@ const About = () => {
     </section>
   );
 };
-export default memo(About);
+export default About;
