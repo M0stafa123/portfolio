@@ -116,6 +116,6 @@ html {
 /*  */
 /* card */
 .techs span {
-  @apply min-w-[60px] md:min-w-[70px] py-3 text-center cursor-default rounded-full bg-mainBG text-mainText capitalize;
+  @apply min-w-[60px] md:min-w-[70px] py-3 px-2.5 text-center cursor-default rounded-full bg-mainBG text-mainText capitalize;
 }
 /*  */
