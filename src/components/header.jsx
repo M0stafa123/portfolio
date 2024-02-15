@@ -5,7 +5,6 @@ const Aside = () => {
   setTimeout(() => {
     setFixed(true);
   }, 2300);
-  console.log(fixed);
   const [active, setActive] = useState("about");
   const handleClick = (item) => {
     setActive(item);

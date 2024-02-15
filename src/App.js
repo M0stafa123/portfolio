@@ -2,12 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./components/main";
 import Addproject from "./components/addProject";
 function App() {
-  setInterval(async () => {
-    const awake = await fetch("https://portfolio-z8h6.onrender.com")
-      .then((res) => res.json())
-      .then((data) => data);
-    console.log(awake, "reAwaking server");
-  }, 600000);
   return (
     <div className="App relative ">
       <div className="mix-blend-color-dodge fixed w-full h-full bg-[url('./bg.svg')] -z-10"></div>

@@ -1,6 +1,7 @@
 import anime from "animejs/lib/anime.es.js";
 import { useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { memo } from "react";
 
 const Skills = () => {
   const [skillsref, skillsinview] = useInView({
@@ -185,4 +186,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default memo(Skills);

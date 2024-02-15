@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./Card";
 // import { Fade } from "react-awesome-reveal";
 import { Slide } from "react-awesome-reveal";
@@ -19,7 +19,7 @@ const Projects = () => {
         setErr(err);
         setIspending(false);
       });
-  }, [projects]);
+  }, []);
   return (
     <section className="p-4" id="projects">
       <div>
