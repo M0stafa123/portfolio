@@ -1,10 +1,6 @@
 import { useState } from "react";
 import SVG from "./logo";
 const Aside = () => {
-  const [fixed, setFixed] = useState(false);
-  setTimeout(() => {
-    setFixed(true);
-  }, 2300);
   const [active, setActive] = useState("about");
   const handleClick = (item) => {
     setActive(item);
@@ -12,17 +8,11 @@ const Aside = () => {
 
   return (
     <aside className="w-full  md:h-screen p-4 md:w-[50%]">
-      <article
-        className={
-          "aside text-center  md:text-left  md:mt-60 " + (fixed ? "md:fixed" : "")
-        }
-      >
+      <article className="aside text-center  md:text-left  md:mt-60 ">
         <div className="relative flex items-center justify-center flex-col md:block">
-          <h1 className="text-3xl  max-w-[500px] my-4 lg:text-6xl md:text-5xl relative  flex items-center justify-center">
+          <h1 className="text-3xl my-4 lg:text-6xl md:text-5xl  flex items-center justify-center">
             <SVG />
-            <span className="whitespace-nowrap ml-[85px] md:ml-[65px]">
-              ostafa Mohamed
-            </span>
+            <span className="whitespace-nowrap">ostafa Mohamed</span>
           </h1>
           <h2
             className=" mainHeader

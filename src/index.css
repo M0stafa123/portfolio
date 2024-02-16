@@ -8,37 +8,21 @@ html {
   @apply scroll-smooth;
 }
 /* GLOPAL */
-.svg {
-  @apply md:w-[140px] md:h-[160px] lg:w-[160px] lg:h-[160px] w-[100px] h-[100px] absolute top-[400px] md:fixed md:top-1/2 left-1/2 -translate-x-1/2 scale-[2] -translate-y-1/2  z-20;
-  animation: place 1s 2.3s forwards;
+.logo {
+  @apply w-[100px] h-[100px] inline-block scale-150 mt-2 -mr-2 md:scale-[1.7] md:mt-3 lg:scale-[2] lg:mr-auto lg:mt-5;
 }
-@media (min-width: 768px) {
-  .svg {
-    @apply -ml-10;
-  }
-}
-.svg svg {
-  stroke-dasharray: 1140;
-  stroke-dashoffset: 1140;
+.loading svg {
+  stroke-dasharray: 1240;
+  stroke-dashoffset: 1240;
   animation: svg 2000ms forwards linear;
 }
-@media (min-width: 768px) {
-  .svg svg {
-    stroke-dasharray: 1240;
-    stroke-dashoffset: 1240;
-  }
-}
+
 @keyframes svg {
   to {
     stroke-dashoffset: 0;
   }
 }
-@keyframes place {
-  to {
-    @apply absolute -translate-x-1/2 top-1/2  -translate-y-1/2 scale-100 left-[60px] md:top-[30px] lg:top-[35px] 
-     mr-[-20px] mt-[4px];
-  }
-}
+
 .bg {
   @apply bg-[#0e0915] z-10  fixed w-full h-full top-0 left-0;
   animation: bg 1s 2.3s forwards;

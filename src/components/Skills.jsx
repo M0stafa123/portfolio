@@ -5,7 +5,7 @@ import { memo } from "react";
 
 const Skills = () => {
   const [skillsref, skillsinview] = useInView({
-    threshold: 0.1,
+    threshold: 0.4,
   });
   const [animation, setAnimation] = useState(true);
   if (skillsinview) {
