@@ -9,7 +9,7 @@ html {
 }
 /* GLOPAL */
 .svg {
-  @apply md:w-[140px] md:h-[160px] lg:w-[160px] lg:h-[160px] w-[100px] h-[100px] absolute top-[400px] md:fixed md:top-1/2 left-1/2 -translate-x-1/2 scale-[2] -translate-y-1/2  z-20;
+  @apply md:w-[140px] md:h-[160px] lg:w-[160px] lg:h-[160px] w-[100px] h-[100px] absolute top-[300px] md:fixed md:top-1/2 left-1/2 -translate-x-1/2 scale-[2] -translate-y-1/2  z-20;
   animation: place 1s 2.3s forwards;
 }
 @media (min-width: 768px) {
