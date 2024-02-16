@@ -102,4 +102,12 @@ html {
 .techs span {
   @apply min-w-[60px] md:min-w-[70px] py-3 px-2.5 text-center cursor-default rounded-full bg-mainBG text-mainText capitalize;
 }
+.card a {
+  background-image: url("https://media.giphy.com/media/3oriNXBK9sX7P4f39u/giphy.gif?cid=ecf05e47gdpqufnukgm4cglfv2wypbnq7hlscbuyz3rywk6u&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 20px;
+}
 /*  */
