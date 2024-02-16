@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SVG from "./logo";
 const Aside = () => {
   const [fixed, setFixed] = useState(false);
@@ -9,19 +9,7 @@ const Aside = () => {
   const handleClick = (item) => {
     setActive(item);
   };
-  useEffect(() => {
-    const scrollToTop = () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-      document.body.style.overflow = "hidden";
-      setTimeout(() => {
-        document.body.style.overflow = "";
-      }, 2000);
-    };
-    scrollToTop();
-  }, []);
+
   return (
     <aside className="w-full  md:h-screen p-4 md:w-[50%]">
       <article

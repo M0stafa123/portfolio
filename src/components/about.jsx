@@ -17,7 +17,7 @@ const About = () => {
         src="./145aeb42-a3b4-492a-bd0a-ea2b5bbf4312.webp"
         fetchpriority="high"
         alt="software"
-        className="software mb-8"
+        className="software my-8  lg:max-w-[700px] mx-auto"
       />
       <p className=" mb-10 capitalize text-4xl">
         build fast, responsive and dynamic websites
