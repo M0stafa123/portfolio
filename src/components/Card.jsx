@@ -1,6 +1,6 @@
 const Card = ({ name, Techs, preview, live, github }) => {
   return (
-    <div>
+    <div className="card">
       <section>
         <img className="mx-auto " src={preview} alt="" />
       </section>
