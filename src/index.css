@@ -114,6 +114,20 @@ html {
   @apply w-[50px] mx-auto h-fit;
 }
 /*  */
+/* projects */
+.loading {
+  @apply w-[200px] mx-auto;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 400;
+  animation: loading 2s infinite linear;
+}
+@keyframes loading {
+  to {
+    stroke-dashoffset: 0; /* Ending point */
+  }
+}
+/*  */
+
 /* card */
 .techs span {
   @apply min-w-[60px] md:min-w-[70px] py-3 px-2.5 text-center cursor-default rounded-full bg-mainBG text-mainText capitalize;
