@@ -1,14 +1,10 @@
 import anime from "animejs/lib/anime.es.js";
 import { useState } from "react";
-import { useInView } from "react-intersection-observer";
 import { memo } from "react";
 
-const Skills = () => {
-  const [skillsref, skillsinview] = useInView({
-    threshold: 0,
-  });
+const Skills = ({ skillsref, skillsInview }) => {
   const [animation, setAnimation] = useState(true);
-  if (skillsinview) {
+  if (skillsInview) {
     if (animation) {
       anime({
         targets: ".skills_brands .animate__animated",

@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SVG from "./logo";
-const Aside = () => {
+const Aside = ({ aboutInview, skillsInview, projectsInview }) => {
   const [fixed, setFixed] = useState(false);
   setTimeout(() => {
     setFixed(true);
@@ -9,7 +9,11 @@ const Aside = () => {
   const handleClick = (item) => {
     setActive(item);
   };
-
+  useEffect(() => {
+    if (aboutInview) setActive("about");
+    else if (skillsInview) setActive("skills");
+    else if (projectsInview) setActive("projects");
+  }, [aboutInview, skillsInview, projectsInview]);
   return (
     <aside className="w-full  md:h-screen p-4 md:w-[50%]">
       <article

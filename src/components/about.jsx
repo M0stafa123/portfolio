@@ -1,6 +1,10 @@
-const About = () => {
+const About = ({ aboutref }) => {
   return (
-    <section id="about" className="flex h-screen flex-col justify-center mb-20">
+    <section
+      ref={aboutref}
+      id="about"
+      className="flex h-screen flex-col justify-center mb-20"
+    >
       <img
         src="./145aeb42-a3b4-492a-bd0a-ea2b5bbf4312.webp"
         fetchpriority="high"

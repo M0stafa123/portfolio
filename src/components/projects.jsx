@@ -4,7 +4,7 @@ import Card from "./Card";
 import { Slide } from "react-awesome-reveal";
 import axios from "axios";
 // import { Zoom } from "react-awesome-reveal";
-const Projects = () => {
+const Projects = ({ projectsref }) => {
   const [projects, setProjects] = useState(null);
   const [err, setErr] = useState(null);
   const [ispending, setIspending] = useState(true);
@@ -21,7 +21,7 @@ const Projects = () => {
       });
   }, []);
   return (
-    <section className="p-4" id="projects">
+    <section ref={projectsref} className="p-4" id="projects">
       <div>
         <h1 className="mainHeader">
           <span>P</span>
