@@ -34,7 +34,7 @@ const Projects = ({ projectsref }) => {
           <span>s</span>
         </h1>
       </div>
-      <article className=" cards flex flex-wrap gap-4">
+      <article className="flex flex-wrap gap-4 cards">
         {projects &&
           projects.map((project) => (
             <Slide
@@ -53,7 +53,7 @@ const Projects = ({ projectsref }) => {
           ))}
         {ispending && (
           <div className="mx-auto">
-            if the Projects took too much time. just wait a litter more the server is
+            if the Projects took too much time. just wait a littel more the server is
             activating
             <svg
               className="loading"
