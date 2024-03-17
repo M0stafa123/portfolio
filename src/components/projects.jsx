@@ -5,6 +5,13 @@ import { Slide } from "react-awesome-reveal";
 import axios from "axios";
 // import { Zoom } from "react-awesome-reveal";
 const Projects = ({ projectsref }) => {
+  // scroll after filtring
+  const scrollToProjects = () => {
+    const projects = document.getElementById("projects");
+    if (projects) {
+      projects.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   const [activeButton, setActiveButton] = useState("React");
   const [projects, setProjects] = useState(null);
   const [err, setErr] = useState(null);
@@ -31,6 +38,7 @@ const Projects = ({ projectsref }) => {
       .then((data) => {
         setProjects(data.data);
         setActiveButton(Techs);
+        scrollToProjects();
       });
   };
   return (
