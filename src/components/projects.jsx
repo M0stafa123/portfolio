@@ -11,7 +11,9 @@ const Projects = ({ projectsref }) => {
   const [ispending, setIspending] = useState(true);
   useEffect(() => {
     axios
-      .get("http://localhost:1000/repos/filter/65c2774c940f12a255a51d7a/?Techs=React")
+      .get(
+        "https://portfolio-z8h6.onrender.com/repos/filter/65c2774c940f12a255a51d7a/?Techs=React"
+      )
       .then((data) => {
         setProjects(data.data);
         setIspending(false);
@@ -24,7 +26,7 @@ const Projects = ({ projectsref }) => {
   const handleClick = (Techs, e) => {
     axios
       .get(
-        `http://localhost:1000/repos/filter/65c2774c940f12a255a51d7a/?Techs=${Techs}`
+        `https://portfolio-z8h6.onrender.com/repos/filter/65c2774c940f12a255a51d7a/?Techs=${Techs}`
       )
       .then((data) => {
         setProjects(data.data);
