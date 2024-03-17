@@ -3,7 +3,7 @@ const About = ({ aboutref }) => {
     <section
       ref={aboutref}
       id="about"
-      className="flex h-screen flex-col justify-center mb-20"
+      className="flex flex-col justify-center h-screen mb-20"
     >
       <img
         src="./145aeb42-a3b4-492a-bd0a-ea2b5bbf4312.webp"
@@ -11,11 +11,13 @@ const About = ({ aboutref }) => {
         alt="software"
         className="software my-8 hidden md:block lg:max-w-[600px] mx-auto"
       />
-      <p className=" mb-10 capitalize text-4xl">
+      <p className="mx-auto mb-10 text-4xl text-center capitalize w-[300px]">
         build fast, responsive and dynamic websites
       </p>
-      <h1 className="text-3xl my-4 capitalize">how did i start?</h1>
-      <p className=" text-center mx-auto md:text-left md:mx-0 md:text-xl leading-10">
+      <h1 className="my-4 text-3xl text-center capitalize md:text-start">
+        how did i start?
+      </h1>
+      <p className="mx-auto leading-10 text-center md:text-left md:mx-0 md:text-xl">
         the journy started when i saw Egypt FWD scholarship. finished the foundations
         and advanced tracks then started learning with{" "}
         <a
