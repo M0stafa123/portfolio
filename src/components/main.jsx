@@ -14,13 +14,13 @@ const Main = () => {
     threshold: 0,
   });
   return (
-    <main className="md:flex md:flex-row items-start gap-4 p-4">
+    <main className="items-start gap-4 p-4 md:flex md:flex-row">
       <Aside
         aboutInview={aboutInview}
         skillsInview={skillsInview}
         projectsInview={projectsInview}
       />
-      <article className="w-full md:w-[50%]">
+      <article className="w-full md:w-[50%] font-Courgette">
         <About aboutref={aboutref} />
         <hr className="my-5" />
         <Skills skillsref={skillsref} skillsInview={skillsInview} />

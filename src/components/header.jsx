@@ -21,17 +21,14 @@ const Aside = ({ aboutInview, skillsInview, projectsInview }) => {
           "aside text-center  md:text-left  md:mt-60 " + (fixed ? "md:fixed" : "")
         }
       >
-        <div className="relative flex items-center justify-center flex-col md:block">
+        <div className="relative flex flex-col items-center justify-center md:block">
           <h1 className="text-3xl  max-w-[500px] my-4 lg:text-6xl md:text-5xl relative  flex items-center justify-center">
             <SVG />
             <span className="whitespace-nowrap ml-[85px] md:ml-[65px]">
               ostafa Mohamed
             </span>
           </h1>
-          <h2
-            className=" mainHeader
-          text-xl md:text-3xl my-4"
-          >
+          <h2 className="my-12 text-xl mainHeader md:text-3xl font-Madimi">
             <span>W</span>
             <span>e</span>
             <span>b</span>
@@ -47,7 +44,7 @@ const Aside = ({ aboutInview, skillsInview, projectsInview }) => {
             <span>r</span>
             <span></span>
           </h2>
-          <ul className="nav hidden items-center justify-center gap-9 md:block  md:w-fit my-4  ">
+          <ul className="items-center justify-center hidden my-4 nav gap-9 md:block md:w-fit ">
             <li
               className={active === "about" ? "active" : ""}
               onClick={() => handleClick("about")}
@@ -75,14 +72,14 @@ const Aside = ({ aboutInview, skillsInview, projectsInview }) => {
           </ul>
         </div>
         <div>
-          <ul className="flex items-center justify-center gap-7 mb-20">
+          <ul className="flex items-center justify-center mb-20 gap-7">
             <li>
               {" "}
               <a
                 target="_blank"
                 href={"https://www.linkedin.com/in/mostafa-hassan-972680214/"}
                 rel="noreferrer"
-                className="md:fixed bottom-10 left-10 text-3xl"
+                className="text-3xl md:fixed bottom-10 left-10"
               >
                 <i className="fa-brands fa-linkedin-in"></i>
               </a>
@@ -92,7 +89,7 @@ const Aside = ({ aboutInview, skillsInview, projectsInview }) => {
                 target="_blank"
                 href={"https://github.com/M0stafa123"}
                 rel="noreferrer"
-                className="md:fixed bottom-10 left-20 text-3xl"
+                className="text-3xl md:fixed bottom-10 left-20"
               >
                 <i className="fa-brands fa-github"></i>
               </a>

@@ -8,9 +8,10 @@ module.exports = {
         mainBG: "rgba(45,212,191,.1)",
         active: "rgb(0 68 60)",
       },
-      // backgroundColor: {
-      //   mainBG: "rgba(45,212,191,.1)",
-      // },
+      fontFamily: {
+        Courgette: "Courgette",
+        Madimi: "Madimi One",
+      },
     },
   },
   plugins: [],

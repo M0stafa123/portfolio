@@ -1,3 +1,4 @@
+@import "./fonts.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,6 +99,11 @@ html {
 }
 .projects div input {
   @apply w-full p-2 text-black border rounded-md outline-none;
+}
+/*  */
+/* about */
+#about p:last-of-type a {
+  @apply inline-block mx-1 w-fit transition-all text-mainText text-nowrap relative after:absolute after:h-0.5 after:w-0 after:transition-all after:bg-mainText after:left-0 after:-bottom-0.5 hover:after:w-full;
 }
 /*  */
 /* skills */

@@ -11,33 +11,26 @@ const About = ({ aboutref }) => {
         alt="software"
         className="software my-8 hidden md:block lg:max-w-[600px] mx-auto"
       />
-      <p className="mx-auto mb-10 text-4xl text-center capitalize w-[300px]">
+      <p className="mx-auto mb-10 text-3xl text-center capitalize md:text-5xl  md:text-start md:mx-0 max-w-[800px] ">
         build fast, responsive and dynamic websites
       </p>
       <h1 className="my-4 text-3xl text-center capitalize md:text-start">
         how did i start?
       </h1>
-      <p className="mx-auto leading-10 text-center md:text-left md:mx-0 md:text-xl">
+      <p className="mx-auto !leading-[1.8] text-center md:text-left md:mx-0 md:text-xl">
         the journy started when i saw Egypt FWD scholarship. finished the foundations
-        and advanced tracks then started learning with{" "}
-        <a
-          href="https://elzero.org/"
-          className="transition-all hover:text-mainText"
-          target="_blank"
-          rel="noreferrer"
-        >
-          ELZERO SCHOOL{" "}
+        and advanced tracks then started learning with
+        <a href="https://elzero.org/" target="_blank" rel="noreferrer">
+          ELZERO SCHOOL
         </a>
         and enhance my skills with projects from
         <a
           href="https://www.frontendmentor.io/profile/M0stafa123/solutions"
-          className="transition-[width] hover:text-mainText"
           target="_blank"
           rel="noreferrer"
         >
-          {" "}
           FrontEnd mentor
-        </a>{" "}
+        </a>
         and problem solving from various sites. i have yet to get jop experience
       </p>
     </section>
