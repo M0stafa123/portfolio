@@ -5,12 +5,13 @@ import { Slide } from "react-awesome-reveal";
 import axios from "axios";
 // import { Zoom } from "react-awesome-reveal";
 const Projects = ({ projectsref }) => {
+  const [activeButton, setActiveButton] = useState("React");
   const [projects, setProjects] = useState(null);
   const [err, setErr] = useState(null);
   const [ispending, setIspending] = useState(true);
   useEffect(() => {
     axios
-      .get("https://portfolio-z8h6.onrender.com/repos/65c2774c940f12a255a51d7a")
+      .get("http://localhost:1000/repos/filter/65c2774c940f12a255a51d7a/?Techs=React")
       .then((data) => {
         setProjects(data.data);
         setIspending(false);
@@ -20,6 +21,16 @@ const Projects = ({ projectsref }) => {
         setIspending(false);
       });
   }, []);
+  const handleClick = (Techs, e) => {
+    axios
+      .get(
+        `http://localhost:1000/repos/filter/65c2774c940f12a255a51d7a/?Techs=${Techs}`
+      )
+      .then((data) => {
+        setProjects(data.data);
+        setActiveButton(Techs);
+      });
+  };
   return (
     <section ref={projectsref} className="p-4" id="projects">
       <div>
@@ -34,6 +45,35 @@ const Projects = ({ projectsref }) => {
           <span>s</span>
         </h1>
       </div>
+      {projects && (
+        <section className="sticky z-10 flex flex-wrap gap-1 my-5 top-5 filter md:relative">
+          <button
+            className={activeButton === "React" ? "active" : ""}
+            onClick={(e) => handleClick("React", e)}
+          >
+            React
+          </button>
+          <button
+            className={activeButton === "Nodejs" ? "active" : ""}
+            onClick={(e) => handleClick("Nodejs", e)}
+          >
+            Nodejs
+          </button>
+          <button
+            className={activeButton === "Tailwind" ? "active" : ""}
+            onClick={(e) => handleClick("Tailwind", e)}
+          >
+            Tailwind
+          </button>
+          <button
+            className={activeButton.includes("HTML") ? "active" : ""}
+            onClick={(e) => handleClick(["HTML", "CSS"], e)}
+          >
+            HTML & CSS
+          </button>
+        </section>
+      )}
+
       <article className="flex flex-wrap gap-4 cards">
         {projects &&
           projects.map((project) => (
