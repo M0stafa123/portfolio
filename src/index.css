@@ -127,7 +127,7 @@ html {
   }
 }
 .filter button {
-  @apply px-[11px] py-2 text-xs transition-all border rounded-md md:px-5 md:py-2 bg-black text-mainText border-mainText;
+  @apply px-[11px] py-2 text-xs transition-all border rounded-md md:text-base md:px-5 md:py-2 bg-black text-mainText border-mainText;
 }
 .filter .active {
   @apply rounded-lg text-active bg-mainText;

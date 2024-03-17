@@ -48,7 +48,7 @@ const Projects = ({ projectsref }) => {
         </h1>
       </div>
       {projects && (
-        <section className="sticky z-10 flex flex-wrap gap-1 my-5 top-5 filter md:relative">
+        <section className="sticky z-10 flex flex-wrap items-center justify-center gap-1 my-20 top-5 filter md:relative">
           <button
             className={activeButton === "React" ? "active" : ""}
             onClick={(e) => handleClick("React", e)}
