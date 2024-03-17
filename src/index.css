@@ -40,7 +40,7 @@ html {
   }
 }
 .bg {
-  @apply bg-[#0e0915] z-10  fixed w-full h-full top-0 left-0;
+  @apply bg-[#0e0915] z-20  fixed w-full h-full top-0 left-0;
   animation: bg 1s 2.3s forwards;
 }
 @keyframes bg {
