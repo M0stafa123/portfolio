@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SVG from "./logo";
 const Aside = React.memo(({ aboutInview, skillsInview, projectsInview }) => {
-  console.log("header render");
-
   const [fixed, setFixed] = useState(false);
   setTimeout(() => {
     setFixed(true);

@@ -1,7 +1,6 @@
 import React from "react";
 
 const About = React.memo(({ aboutref }) => {
-  console.log("About render");
   return (
     <section
       ref={aboutref}

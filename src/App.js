@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import Main from "./components/main";
 import Addproject from "./components/addProject";
 function App() {
-  console.log("app rendred");
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo({

@@ -5,7 +5,6 @@ import Skills from "./Skills";
 import { useInView } from "react-intersection-observer";
 import React from "react";
 const Main = React.memo(() => {
-  console.log("Main render");
   const [aboutref, aboutInview] = useInView({
     threshold: 0,
   });
