@@ -50,7 +50,7 @@ const Addproject = () => {
       });
   };
   return (
-    <div className="projects  flex flex-col gap-4 items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center h-screen gap-4 projects">
       <div>
         <label htmlFor="name">Name</label>
         <input
@@ -104,7 +104,7 @@ const Addproject = () => {
       </div>
       <div>
         <button
-          className="bg-mainBG text-mainText w-full p-3 rounded-md mt-4"
+          className="w-full p-3 mt-4 rounded-md bg-mainBG text-mainText"
           onClick={handleClick}
         >
           Add project

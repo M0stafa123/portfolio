@@ -3,7 +3,9 @@ import About from "./about";
 import Aside from "./header";
 import Skills from "./Skills";
 import { useInView } from "react-intersection-observer";
-const Main = () => {
+import React from "react";
+const Main = React.memo(() => {
+  console.log("Main render");
   const [aboutref, aboutInview] = useInView({
     threshold: 0,
   });
@@ -29,6 +31,6 @@ const Main = () => {
       </article>
     </main>
   );
-};
+});
 
 export default Main;

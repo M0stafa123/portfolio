@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Main from "./components/main";
 import Addproject from "./components/addProject";
 function App() {
+  console.log("app rendred");
   useEffect(() => {
     const scrollToTop = () => {
       window.scrollTo({
@@ -18,7 +19,7 @@ function App() {
     scrollToTop();
   }, []);
   return (
-    <div className="App relative ">
+    <div className="relative App ">
       <div className="mix-blend-color-dodge fixed w-full h-full bg-[url('./bg.svg')] -z-10"></div>
       <div className="bg"></div>
       <BrowserRouter>

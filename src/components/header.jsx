@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import SVG from "./logo";
-const Aside = ({ aboutInview, skillsInview, projectsInview }) => {
+const Aside = React.memo(({ aboutInview, skillsInview, projectsInview }) => {
+  console.log("header render");
+
   const [fixed, setFixed] = useState(false);
   setTimeout(() => {
     setFixed(true);
@@ -14,6 +16,7 @@ const Aside = ({ aboutInview, skillsInview, projectsInview }) => {
     else if (skillsInview) setActive("skills");
     else if (projectsInview) setActive("projects");
   }, [aboutInview, skillsInview, projectsInview]);
+
   return (
     <aside className="w-full  md:h-screen p-4 md:w-[50%]">
       <article
@@ -99,6 +102,6 @@ const Aside = ({ aboutInview, skillsInview, projectsInview }) => {
       </article>
     </aside>
   );
-};
+});
 
 export default Aside;

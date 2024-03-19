@@ -3,6 +3,8 @@ import { useState } from "react";
 import { memo } from "react";
 
 const Skills = ({ skillsref, skillsInview }) => {
+  console.log("Skills render");
+
   const [animation, setAnimation] = useState(true);
   if (skillsInview) {
     if (animation) {

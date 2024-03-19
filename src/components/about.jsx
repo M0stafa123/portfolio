@@ -1,4 +1,7 @@
-const About = ({ aboutref }) => {
+import React from "react";
+
+const About = React.memo(({ aboutref }) => {
+  console.log("About render");
   return (
     <section
       ref={aboutref}
@@ -35,5 +38,6 @@ const About = ({ aboutref }) => {
       </p>
     </section>
   );
-};
+});
+
 export default About;

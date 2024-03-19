@@ -5,6 +5,8 @@ import { Slide } from "react-awesome-reveal";
 import axios from "axios";
 // import { Zoom } from "react-awesome-reveal";
 const Projects = ({ projectsref }) => {
+  console.log("Projects render");
+
   // scroll after filtring
   const scrollToProjects = () => {
     const projects = document.getElementById("projects");

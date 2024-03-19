@@ -2,7 +2,7 @@ const Card = ({ name, Techs, preview, live, github }) => {
   return (
     <div className="card">
       <section>
-        <img className="mx-auto " src={preview} alt="" />
+        <img className="mx-auto" loading="lazy" src={preview} alt={name} />
       </section>
       <section>
         <h4 className="my-3">{name}</h4>
@@ -16,7 +16,7 @@ const Card = ({ name, Techs, preview, live, github }) => {
             Github link
           </a>
         </div>
-        <div className="techs flex flex-wrap item center gap-4">
+        <div className="flex flex-wrap gap-4 techs item center">
           {Techs.map((tech) => (
             <span key={tech}>{tech}</span>
           ))}
