@@ -1,4 +1,4 @@
-import Projects from "./projects";
+import Projects from "./projects/projects";
 import About from "./about";
 import Aside from "./header";
 import Skills from "./Skills";

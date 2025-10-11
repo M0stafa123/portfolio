@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Card from "./Card";
+import allProjects from "../../projects.json";
 // import { Fade } from "react-awesome-reveal";
 import { Slide } from "react-awesome-reveal";
-import axios from "axios";
-// import { Zoom } from "react-awesome-reveal";
+import Tabs from "./tabs";
+
 const Projects = ({ projectsref }) => {
   // scroll after filtring
+
   const scrollToProjects = () => {
     const projects = document.getElementById("projects");
     if (projects) {
@@ -14,32 +16,42 @@ const Projects = ({ projectsref }) => {
   };
   const [activeButton, setActiveButton] = useState("React");
   const [projects, setProjects] = useState(null);
-  const [err, setErr] = useState(null);
   const [ispending, setIspending] = useState(true);
+
   useEffect(() => {
-    axios
-      .get(
-        "https://portfolio-z8h6.onrender.com/repos/filter/65c2774c940f12a255a51d7a/?Techs=React"
+    const filteredProjects = allProjects
+      .filter((project) =>
+        project.Techs.some((tech) => {
+          if (tech.toLowerCase().includes("React".toLowerCase())) {
+            return true;
+          }
+          return false;
+        })
       )
-      .then((data) => {
-        setProjects(data.data);
-        setIspending(false);
-      })
-      .catch((err) => {
-        setErr(err);
-        setIspending(false);
-      });
+      .reverse();
+    setTimeout(() => {
+      setIspending(false);
+    }, 7000);
+    setProjects(filteredProjects);
   }, []);
-  const handleClick = (Techs, e) => {
-    axios
-      .get(
-        `https://portfolio-z8h6.onrender.com/repos/filter/65c2774c940f12a255a51d7a/?Techs=${Techs}`
+  const handleClick = (Techs) => {
+    setIspending(true);
+    const filteredProjects = allProjects
+      .filter((project) =>
+        project.Techs.some((tech) => {
+          if (tech.toLowerCase().includes(Techs.toLowerCase())) {
+            return true;
+          }
+          return false;
+        })
       )
-      .then((data) => {
-        setProjects(data.data);
-        setActiveButton(Techs);
-        scrollToProjects();
-      });
+      .reverse();
+    setTimeout(() => {
+      setIspending(false);
+    }, 500);
+    setProjects(filteredProjects);
+    setActiveButton(Techs);
+    scrollToProjects();
   };
   return (
     <section ref={projectsref} className="p-4" id="projects">
@@ -55,42 +67,19 @@ const Projects = ({ projectsref }) => {
           <span>s</span>
         </h1>
       </div>
-      {projects && (
-        <section className="sticky z-10 flex flex-wrap items-center justify-center gap-1 my-20 top-5 filter md:relative">
-          <button
-            className={activeButton === "React" ? "active" : ""}
-            onClick={(e) => handleClick("React", e)}
-          >
-            React
-          </button>
-          <button
-            className={activeButton === "Nodejs" ? "active" : ""}
-            onClick={(e) => handleClick("Nodejs", e)}
-          >
-            Nodejs
-          </button>
-          <button
-            className={activeButton === "Tailwind" ? "active" : ""}
-            onClick={(e) => handleClick("Tailwind", e)}
-          >
-            Tailwind
-          </button>
-          <button
-            className={activeButton.includes("HTML") ? "active" : ""}
-            onClick={(e) => handleClick(["HTML", "CSS"], e)}
-          >
-            HTML & CSS
-          </button>
-        </section>
+      <Tabs handleClick={handleClick} activeButton={activeButton} />
+      {ispending && (
+        <div className="mx-auto text-center text-gray-400">
+          it doesn't take time but i am just flexing my loader :)
+        </div>
       )}
-
       <article className="flex flex-wrap gap-4 cards">
-        {projects &&
-          projects.map((project) => (
+        {!ispending &&
+          projects?.map((project, i) => (
             <Slide
               triggerOnce
               className=" transition-all rounded-md hover:bg-[#ffffff0d] w-full md:w-[45%] p-4"
-              key={project._id}
+              key={project.name + i}
             >
               <Card
                 name={project.name}
@@ -101,10 +90,9 @@ const Projects = ({ projectsref }) => {
               />
             </Slide>
           ))}
+
         {ispending && (
           <div className="mx-auto">
-            if the Projects took too much time. just wait a littel more the server is
-            activating
             <svg
               className="loading"
               xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +171,6 @@ const Projects = ({ projectsref }) => {
             </svg>
           </div>
         )}
-        {err && <div>{err}</div>}
       </article>
     </section>
   );

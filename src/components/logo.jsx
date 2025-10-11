@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const SVG = () => {
   return (
     <div className="svg">
