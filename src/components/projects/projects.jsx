@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Card from "./card";
 import allProjects from "../../projects.json";
 // import { Fade } from "react-awesome-reveal";
 import { Slide } from "react-awesome-reveal";
 import Tabs from "./tabs";
+import Card from "./card";
 
 const Projects = ({ projectsref }) => {
   // scroll after filtring
