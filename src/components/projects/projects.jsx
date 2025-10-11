@@ -3,7 +3,7 @@ import allProjects from "../../projects.json";
 // import { Fade } from "react-awesome-reveal";
 import { Slide } from "react-awesome-reveal";
 import Tabs from "./tabs";
-import Card from "./card";
+import Card from "./projectCard";
 
 const Projects = ({ projectsref }) => {
   // scroll after filtring
