@@ -420,11 +420,8 @@
     "__v": 0
   },
   {
-    "_id": {
-      "$oid": "68e92e69288948b0d47b2b25"
-    },
     "userID": "65c2774c940f12a255a51d7a",
-    "preview": "assets/club master.png",
+    "preview": "assets/club.png",
     "name": "Club Master",
     "Techs": ["React", "Tailwind", "recharts.js"],
     "live": "https://club-master-no-api.vercel.app/",

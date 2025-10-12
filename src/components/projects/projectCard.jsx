@@ -1,4 +1,6 @@
 const Card = ({ name, Techs, preview, live, github }) => {
+  console.log(preview, "prev");
+
   return (
     <div className="card">
       <section>
