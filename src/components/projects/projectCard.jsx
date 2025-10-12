@@ -2,7 +2,12 @@ const Card = ({ name, Techs, preview, live, github }) => {
   return (
     <div className="card">
       <section>
-        <img className="mx-auto" loading="lazy" src={preview} alt={name} />
+        <img
+          className="mx-auto lg:h-[150px] w-full"
+          loading="lazy"
+          src={preview}
+          alt={name}
+        />
       </section>
       <section>
         <h4 className="my-3">{name}</h4>
