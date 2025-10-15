@@ -1,6 +1,4 @@
 const Card = ({ name, Techs, preview, live, github }) => {
-  console.log(preview, "prev");
-
   return (
     <div className="card">
       <section>
@@ -25,7 +23,12 @@ const Card = ({ name, Techs, preview, live, github }) => {
         </div>
         <div className="flex flex-wrap gap-4 techs item center">
           {Techs.map((tech) => {
-            if (tech === "real-life experience") return null;
+            if (tech === "Client Projects")
+              return (
+                <span key={tech} className="client-project">
+                  {tech}
+                </span>
+              );
             return <span key={tech}>{tech}</span>;
           })}
         </div>

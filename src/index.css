@@ -152,4 +152,15 @@ html {
   -webkit-background-clip: text;
   font-size: 20px;
 }
+
+.client-project {
+  background-image: url("../public/3oriNXBK9sX7P4f39u.webp");
+  background-size: cover;
+  z-index: 1;
+  position: relative;
+}
+.client-project::after {
+  content: "";
+  @apply absolute top-0 left-0 bg-black rounded-full opacity-60 size-full -z-[1];
+}
 /*  */
