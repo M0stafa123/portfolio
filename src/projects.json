@@ -404,7 +404,7 @@
     "name": "lawyer web",
     "Techs": ["React", "Tailwind", "CSS", "Formik", "APi"],
     "live": "https://lawyer-web-no-api.vercel.app/",
-    "github": "https://github.com/M0stafa123/lawyer-web/tree/no-api",
+    "github": "",
     "__v": 0
   },
   {
@@ -416,7 +416,7 @@
     "name": "Lec",
     "Techs": ["React", "Tailwind", "stripe"],
     "live": "https://lec-no-api.vercel.app/",
-    "github": "https://github.com/M0stafa123/lec/tree/no-api",
+    "github": "",
     "__v": 0
   },
   {
@@ -425,7 +425,16 @@
     "name": "Club Master",
     "Techs": ["React", "Tailwind", "recharts.js"],
     "live": "https://club-master-no-api.vercel.app/",
-    "github": "https://github.com/M0stafa123/club-master/tree/no-api",
+    "github": "",
+    "__v": 0
+  },
+  {
+    "userID": "65c2774c940f12a255a51d7a",
+    "preview": "assets/qtx.png",
+    "name": "QTX",
+    "Techs": ["React", "Tailwind", "recharts.js", "leaflet"],
+    "live": "https://qtx-ten.vercel.app/",
+    "github": "",
     "__v": 0
   }
 ]
