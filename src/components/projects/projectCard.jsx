@@ -17,9 +17,11 @@ const Card = ({ name, Techs, preview, live, github }) => {
               Live site
             </a>
           )}
-          <a target="_blank" href={github} rel="noreferrer">
-            Github link
-          </a>
+          {github && (
+            <a target="_blank" href={github} rel="noreferrer">
+              Github link
+            </a>
+          )}
         </div>
         <div className="flex flex-wrap gap-4 techs item center">
           {Techs.map((tech) => {

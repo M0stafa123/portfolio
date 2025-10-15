@@ -12,6 +12,9 @@ module.exports = {
         Courgette: "Courgette",
         Madimi: "Madimi One",
       },
+      screens: {
+        optimal: "920px",
+      },
     },
   },
   plugins: [],

@@ -10,10 +10,10 @@ html {
 }
 /* GLOPAL */
 .svg {
-  @apply md:w-[140px] md:h-[160px] lg:w-[160px] lg:h-[160px] w-[100px] h-[100px] absolute top-[300px] md:fixed md:top-1/2 left-1/2 -translate-x-1/2 scale-[2] -translate-y-1/2  z-20;
+  @apply optimal:w-[140px] optimal:h-[160px] lg:w-[160px] lg:h-[160px] w-[100px] h-[100px] absolute top-[300px] optimal:fixed optimal:top-1/2 left-1/2 -translate-x-1/2 scale-[2] -translate-y-1/2  z-20;
   animation: place 1s 2.3s forwards;
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .svg {
     @apply -ml-10;
   }
@@ -23,7 +23,7 @@ html {
   stroke-dashoffset: 1140;
   animation: svg 2000ms forwards linear;
 }
-@media (min-width: 768px) {
+@media (min-width: 920px) {
   .svg svg {
     stroke-dasharray: 1240;
     stroke-dashoffset: 1240;
@@ -36,7 +36,7 @@ html {
 }
 @keyframes place {
   to {
-    @apply absolute -translate-x-1/2 top-1/2  -translate-y-1/2 scale-100 left-[60px] md:top-[30px] lg:top-[35px] 
+    @apply absolute -translate-x-1/2 top-1/2  -translate-y-1/2 scale-100 left-[60px] optimal:top-[30px] lg:top-[35px] 
      mr-[-20px] mt-[4px];
   }
 }
@@ -51,7 +51,7 @@ html {
   }
 }
 .mainHeader {
-  @apply p-2 mb-4 text-3xl md:text-6xl;
+  @apply p-2 mb-4 text-3xl optimal:text-6xl;
 }
 .mainHeader span {
   @apply mx-[1px] cursor-default;
@@ -81,7 +81,7 @@ html {
   @apply flex items-center gap-[2px] cursor-pointer w-fit text-slate-600;
 }
 .nav li span {
-  @apply hidden md:block w-5 h-[1px]   transition-all bg-slate-600;
+  @apply hidden optimal:block w-5 h-[1px]   transition-all bg-slate-600;
 }
 .active span {
   @apply !w-10 !bg-white;
@@ -92,7 +92,7 @@ html {
 /*  */
 /* add Projects */
 .projects div {
-  @apply w-[300px] md:w-[400px];
+  @apply w-[300px] optimal:w-[400px];
 }
 .projects div label {
   @apply flex justify-between my-4 text-xl text-mainText;
@@ -133,7 +133,7 @@ html {
   }
 }
 .filter button {
-  @apply px-[11px] py-2 text-xs transition-all border rounded-md md:text-base md:px-5 md:py-2 bg-black text-mainText border-mainText;
+  @apply px-[11px] py-2 text-xs transition-all border rounded-md optimal:text-base optimal:px-5 optimal:py-2 bg-black text-mainText border-mainText;
 }
 .filter .active {
   @apply rounded-lg text-active bg-mainText;
@@ -142,7 +142,7 @@ html {
 
 /* card */
 .techs span {
-  @apply min-w-[60px] md:min-w-[70px] py-3 px-2.5 text-center cursor-default rounded-full bg-mainBG text-mainText capitalize;
+  @apply min-w-[60px] optimal:min-w-[70px] py-3 px-2.5 text-center cursor-default rounded-full bg-mainBG text-mainText capitalize;
 }
 .card a {
   background-image: url("../public/3oriNXBK9sX7P4f39u.webp");

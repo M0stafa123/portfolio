@@ -15,13 +15,13 @@ const Main = React.memo(() => {
     threshold: 0,
   });
   return (
-    <main className="items-start gap-4 p-4 md:flex md:flex-row">
+    <main className="items-start gap-4 p-4 optimal:flex optimal:flex-row">
       <Aside
         aboutInview={aboutInview}
         skillsInview={skillsInview}
         projectsInview={projectsInview}
       />
-      <article className="w-full md:w-[50%] font-Courgette">
+      <article className="w-full optimal:w-[50%] font-Courgette">
         <About aboutref={aboutref} />
         <hr className="my-5" />
         <Skills skillsref={skillsref} skillsInview={skillsInview} />

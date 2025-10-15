@@ -11,15 +11,15 @@ const About = React.memo(({ aboutref }) => {
         src="./145aeb42-a3b4-492a-bd0a-ea2b5bbf4312.webp"
         fetchpriority="high"
         alt="software"
-        className="software my-8 hidden md:block lg:max-w-[600px] mx-auto"
+        className="software my-8 hidden optimal:block lg:max-w-[600px] mx-auto"
       />
-      <p className="mx-auto mb-10 text-3xl text-center capitalize md:text-5xl  md:text-start md:mx-0 max-w-[800px] ">
+      <p className="mx-auto mb-10 text-3xl text-center capitalize optimal:text-5xl  optimal:text-start optimal:mx-0 max-w-[800px] ">
         build fast, responsive and dynamic websites
       </p>
-      <h1 className="my-4 text-3xl text-center capitalize md:text-start">
+      <h1 className="my-4 text-3xl text-center capitalize optimal:text-start">
         how did i start?
       </h1>
-      <p className="mx-auto !leading-[1.8] text-center md:text-left md:mx-0 md:text-xl">
+      <p className="mx-auto !leading-[1.8] text-center optimal:text-left optimal:mx-0 optimal:text-xl">
         the journy started when i saw Egypt FWD scholarship. finished the foundations
         and advanced tracks then started learning with
         <a href="https://elzero.org/" target="_blank" rel="noreferrer">

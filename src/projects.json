@@ -337,18 +337,6 @@
   },
   {
     "_id": {
-      "$oid": "65d2734d9b802adf8ffbf226"
-    },
-    "userID": "65c2774c940f12a255a51d7a",
-    "preview": "assets/E-commerc.webp",
-    "name": "E-commerce",
-    "Techs": ["TS", "mongodb", "Nodejs"],
-    "live": "",
-    "github": "https://github.com/M0stafa123/E-commerce/tree/main/server",
-    "__v": 0
-  },
-  {
-    "_id": {
       "$oid": "65db4c6bbe45ace0b19b1a12"
     },
     "userID": "65c2774c940f12a255a51d7a",

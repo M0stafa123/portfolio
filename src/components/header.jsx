@@ -16,20 +16,21 @@ const Aside = React.memo(({ aboutInview, skillsInview, projectsInview }) => {
   }, [aboutInview, skillsInview, projectsInview]);
 
   return (
-    <aside className="w-full  md:h-screen p-4 md:w-[50%]">
+    <aside className="w-full  optimal:h-screen p-4 optimal:w-[50%]">
       <article
         className={
-          "aside text-center  md:text-left  md:mt-60 " + (fixed ? "md:fixed" : "")
+          "aside text-center  optimal:text-left  optimal:mt-60 " +
+          (fixed ? "optimal:fixed" : "")
         }
       >
-        <div className="relative flex flex-col items-center justify-center md:block">
-          <h1 className="text-3xl  max-w-[500px] my-4 lg:text-6xl md:text-5xl relative  flex items-center justify-center">
+        <div className="relative flex flex-col items-center justify-center optimal:block">
+          <h1 className="text-3xl  max-w-[500px] my-4 lg:text-6xl optimal:text-5xl relative  flex items-center justify-center">
             <SVG />
-            <span className="whitespace-nowrap ml-[85px] md:ml-[65px]">
+            <span className="whitespace-nowrap ml-[85px] optimal:ml-[65px]">
               ostafa Mohamed
             </span>
           </h1>
-          <h2 className="my-12 text-xl mainHeader md:text-3xl font-Madimi">
+          <h2 className="my-12 text-xl mainHeader optimal:text-3xl font-Madimi">
             <span>W</span>
             <span>e</span>
             <span>b</span>
@@ -45,7 +46,7 @@ const Aside = React.memo(({ aboutInview, skillsInview, projectsInview }) => {
             <span>r</span>
             <span></span>
           </h2>
-          <ul className="items-center justify-center hidden my-4 nav gap-9 md:block md:w-fit ">
+          <ul className="items-center justify-center hidden my-4 nav gap-9 optimal:block optimal:w-fit ">
             <li
               className={active === "about" ? "active" : ""}
               onClick={() => handleClick("about")}
@@ -80,7 +81,7 @@ const Aside = React.memo(({ aboutInview, skillsInview, projectsInview }) => {
                 target="_blank"
                 href={"https://www.linkedin.com/in/mostafa-hassan-972680214/"}
                 rel="noreferrer"
-                className="text-3xl md:fixed bottom-10 left-10"
+                className="text-3xl optimal:fixed bottom-10 left-10"
               >
                 <i className="fa-brands fa-linkedin-in"></i>
               </a>
@@ -90,7 +91,7 @@ const Aside = React.memo(({ aboutInview, skillsInview, projectsInview }) => {
                 target="_blank"
                 href={"https://github.com/M0stafa123"}
                 rel="noreferrer"
-                className="text-3xl md:fixed bottom-10 left-20"
+                className="text-3xl optimal:fixed bottom-10 left-20"
               >
                 <i className="fa-brands fa-github"></i>
               </a>

@@ -3,7 +3,7 @@ const Tabs = ({ handleClick, activeButton }) => {
 
   return (
     <>
-      <section className="sticky z-10 flex flex-wrap items-center justify-center gap-1 my-20 top-5 filter md:relative">
+      <section className="sticky z-10 flex flex-wrap items-center justify-center gap-1 my-20 top-5 filter optimal:relative">
         {tabs.map((tab) => (
           <button
             key={tab}
