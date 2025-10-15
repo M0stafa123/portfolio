@@ -11,7 +11,7 @@ const Projects = ({ projectsref }) => {
       projects.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const [activeButton, setActiveButton] = useState("React");
+  const [activeButton, setActiveButton] = useState("real-life");
   const [projects, setProjects] = useState(null);
   const [ispending, setIspending] = useState(true);
 
@@ -19,7 +19,7 @@ const Projects = ({ projectsref }) => {
     const filteredProjects = allProjects
       .filter((project) =>
         project.Techs.some((tech) => {
-          if (tech.toLowerCase().includes("React".toLowerCase())) {
+          if (tech.toLowerCase().includes("real-life".toLowerCase())) {
             return true;
           }
           return false;

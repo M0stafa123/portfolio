@@ -1,5 +1,5 @@
 const Tabs = ({ handleClick, activeButton }) => {
-  const tabs = ["React", "Nodejs", "Tailwind", "HTML"];
+  const tabs = ["real-life", "React", "Nodejs", "Tailwind", "HTML"];
 
   return (
     <>

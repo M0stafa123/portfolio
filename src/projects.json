@@ -402,7 +402,7 @@
     "userID": "65c2774c940f12a255a51d7a",
     "preview": "assets/مكتب سامح عاشور.png",
     "name": "lawyer web",
-    "Techs": ["React", "Tailwind", "CSS", "Formik", "APi"],
+    "Techs": ["React", "Tailwind", "CSS", "Formik", "real-life experience"],
     "live": "https://lawyer-web-no-api.vercel.app/",
     "github": "",
     "__v": 0
@@ -414,7 +414,7 @@
     "userID": "65c2774c940f12a255a51d7a",
     "preview": "assets/Lec.png",
     "name": "Lec",
-    "Techs": ["React", "Tailwind", "stripe"],
+    "Techs": ["React", "Tailwind", "stripe", "real-life experience"],
     "live": "https://lec-no-api.vercel.app/",
     "github": "",
     "__v": 0
@@ -423,7 +423,7 @@
     "userID": "65c2774c940f12a255a51d7a",
     "preview": "assets/club.png",
     "name": "Club Master",
-    "Techs": ["React", "Tailwind", "recharts.js"],
+    "Techs": ["React", "Tailwind", "recharts.js", "real-life experience"],
     "live": "https://club-master-no-api.vercel.app/",
     "github": "",
     "__v": 0
@@ -432,7 +432,7 @@
     "userID": "65c2774c940f12a255a51d7a",
     "preview": "assets/qtx.png",
     "name": "QTX",
-    "Techs": ["React", "Tailwind", "recharts.js", "leaflet"],
+    "Techs": ["React", "Tailwind", "recharts.js", "leaflet", "real-life experience"],
     "live": "https://qtx-ten.vercel.app/",
     "github": "",
     "__v": 0
